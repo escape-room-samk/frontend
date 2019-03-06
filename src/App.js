@@ -20,13 +20,13 @@ class App extends Component {
   };
   componentDidMount() {
     axios
-      .get("http://localhost:3000/api/imageReader")
+      .get("http://172.17.2.10:3000/api/imageReader")
       .then(response => {
         // create an array of data only with relevant data
         const newData = response.data.map(c => {
           return {
             id: c._id,
-            name: c.value
+            name: c.question
           };
         });
         const newState = Object.assign({}, this.state, {
@@ -37,7 +37,7 @@ class App extends Component {
       .catch(error => console.log(error));
 
     axios
-      .get("http://localhost:3000/api/rfidreader")
+      .get("http://172.17.2.10:3000/api/rfidreader")
       .then(response => {
         // create an array of data only with relevant data
         const newData = response.data.map(c => {
@@ -54,7 +54,7 @@ class App extends Component {
       .catch(error => console.log(error));
 
     axios
-      .get("http://localhost:3000/api/qrreader")
+      .get("http://172.17.2.10:3000/api/qrreader")
       .then(response => {
         // create an array of data only with relevant data
         const newData = response.data.map(c => {
@@ -71,7 +71,7 @@ class App extends Component {
       .catch(error => console.log(error));
 
     axios
-      .get("http://localhost:3000/api/motionsensor")
+      .get("http://172.17.2.10:3000/api/motionsensor")
       .then(response => {
         // create an array of data only with relevant data
         const newData = response.data.map(c => {
