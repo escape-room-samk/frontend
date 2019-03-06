@@ -25,7 +25,7 @@ class App extends Component {
         // create an array of data only with relevant data
         const newData = response.data.map(c => {
           return {
-            id: c._id,
+            id: c.question,
             name: c.question
           };
         });

@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// import the Contact component
-import Contact from "./Data";
+// import the Data component
+import Data from "./Data";
 
 function DataList(props) {
   return (
-    <div>{props.data.map(c => <Contact key={c.id} name={c.name} />)}</div>
+    <div>{props.data.map(c => <Data key={c.id} name={c.name} id={c.id} />)}</div>
   );
 }
 
