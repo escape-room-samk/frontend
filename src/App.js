@@ -23,8 +23,10 @@ class App extends Component {
         // create an array of data only with relevant data
         const newData = response.data.map(c => {
           return {
-            id: c.question,
-            name: c.question
+            devID: c.devID,
+            question: c.question,
+            boolean: c.boolean,
+            value: c.value
           };
         });
         const newState = Object.assign({}, this.state, {
