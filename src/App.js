@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./logo.svg";
-// import Data from "./data/Data";
-
 import "./App.css";
-
+import Iframe from "react-iframe";
 import axios from "axios";
 import DataList from "./components/DataList";
 // import { getData } from "./data/Get";
@@ -31,6 +29,8 @@ class App extends Component {
         });
         const newState = Object.assign({}, this.state, {
           dataImage: newData
+            .splice(newData.length - 5, newData.length - 1)
+            .reverse()
         });
         this.setState(newState);
       })
@@ -48,6 +48,8 @@ class App extends Component {
         });
         const newState = Object.assign({}, this.state, {
           dataRFID: newData
+            .splice(newData.length - 5, newData.length - 1)
+            .reverse()
         });
         this.setState(newState);
       })
@@ -65,6 +67,8 @@ class App extends Component {
         });
         const newState = Object.assign({}, this.state, {
           dataQR: newData
+            .splice(newData.length - 5, newData.length - 1)
+            .reverse()
         });
         this.setState(newState);
       })
@@ -82,6 +86,8 @@ class App extends Component {
         });
         const newState = Object.assign({}, this.state, {
           dataMotion: newData
+            .splice(newData.length - 5, newData.length - 1)
+            .reverse()
         });
         this.setState(newState);
       })
@@ -95,6 +101,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">React Image Reader</h1>
         </header>
+
         <Container>
           <Row>
             <Col>
@@ -113,6 +120,7 @@ class App extends Component {
               {"IMAGE sensor"}
               <DataList data={this.state.dataImage} />
             </Col>
+            
           </Row>
         </Container>
       </div>
