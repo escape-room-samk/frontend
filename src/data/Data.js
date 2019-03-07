@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BACKEND_URL = process.env.REACT_APP_API_URL || "http://localhost:3000";
+const BACKEND_URL = process.env.REACT_APP_API_URL || "http://172.17.2.10:3000";
 
 function getData(api) {
   axios
@@ -16,6 +16,7 @@ function getData(api) {
       this.setState(newState);
     })
     .catch(error => console.log(error));
+    return data
 }
 
 function getImage() {
