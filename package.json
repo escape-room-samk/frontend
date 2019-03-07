@@ -6,10 +6,16 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "prop-types": "^15.6.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-iframe": "^1.5.0",
+    "react-player": "^1.9.3",
     "react-router-dom": "^4.3.1",
-    "reactstrap": "^7.1.0"
+    "react-streams": "^13.6.6",
+    "reactstrap": "^7.1.0",
+    "redux": "^4.0.1",
+    "rxjs": "^6.4.0",
+    "video-react": "^0.13.3"
   },
   "devDependencies": {
     "react-scripts": "1.0.17"
