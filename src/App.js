@@ -120,7 +120,19 @@ class App extends Component {
               {"IMAGE sensor"}
               <DataList data={this.state.dataImage} />
             </Col>
-            
+            <Col>
+          
+              <Iframe
+                url="http://172.17.2.25:8000"
+                width="px"
+                height="450px"
+                id="myId"
+                className="myClassname"
+                display="initial"
+                position="relative"
+                allowFullScreen
+              />
+            </Col>
           </Row>
         </Container>
       </div>
