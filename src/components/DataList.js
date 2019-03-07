@@ -6,7 +6,7 @@ import Data from "./Data";
 
 function DataList(props) {
   return (
-    <div>{props.data.map(c => <Data key={c.id} name={c.name} id={c.id} boolean={c.boolean} />)}</div>
+    <div>{props.data.map(c => <Data key={c.devID} question={c.question} id={c.devID} boolean={c.boolean} value={c.value}/>)}</div>
   );
 }
 
