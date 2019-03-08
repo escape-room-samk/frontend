@@ -46,7 +46,7 @@ class RfidReader extends Component {
         });
         const newState = Object.assign({}, this.state, {
           dataQR: newData
-            .splice(newData.length - 5, newData.length - 1)
+            .splice(newData.length - 1, newData.length - 1)
             .reverse()
         });
         this.setState(newState);

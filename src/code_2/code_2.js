@@ -29,7 +29,7 @@ class imageSensor extends Component {
       });
       const newState = Object.assign({}, this.state, {
         dataRFID: newData
-          .splice(newData.length - 5, newData.length - 1)
+          .splice(newData.length - 2, newData.length - 1)
           .reverse()
       });
       this.setState(newState);

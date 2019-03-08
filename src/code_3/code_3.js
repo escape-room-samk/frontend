@@ -25,7 +25,7 @@ class RfidReader extends Component {
         });
         const newState = Object.assign({}, this.state, {
           dataMotion: newData
-            .splice(newData.length - 5, newData.length - 1)
+            .splice(newData.length - 2, newData.length - 1)
             .reverse()
         });
         this.setState(newState);
@@ -44,7 +44,9 @@ class RfidReader extends Component {
           };
         });
         const newState = Object.assign({}, this.state, {
-          RfidData: newData.reverse()
+          RfidData: newData
+          .splice(newData.length - 1, newData.length - 1)
+          .reverse()
         });
         this.setState(newState);
       })
