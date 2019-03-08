@@ -14,7 +14,7 @@ class imageSensor extends Component {
   componentDidMount() {
 
     axios
-      .get("http://172.17.2.99:3000/api/imageReader")
+      .get("http://172.17.2.10:3000/api/imageReader")
       .then(response => {
         // create an array of data only with relevant data
         const newData = response.data.map(c => {
