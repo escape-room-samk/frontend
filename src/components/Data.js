@@ -5,10 +5,12 @@ import "./Data.css";
 function Data(props) {
   return (
     <div className="contact">
-    <p>Question:</p>
+    <h6>{props.devID} </h6>
     <p><b>{props.question}</b></p>
-    <p>your answer is {props.value}</p> 
-    <p>Answer is: {props.boolean} </p> 
+    <p>{props.value}</p> 
+    <p>{props.boolean} </p> 
+   
+
     </div>
   );
 }
