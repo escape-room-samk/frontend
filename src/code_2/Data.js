@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Data.css";
+import {Redirect} from 'react-router-dom'
 
 function Data(props) {
   if(props.boolean === "true"){
@@ -9,8 +10,12 @@ function Data(props) {
   else if(props.boolean === "false"){
     bgColor="Red"
   }
-  else{
+  else if(props.boolean ==="question"){
     bgColor="lightBlue"
+  }
+  else if(props.boolean ==="win"){
+    return(
+      <Redirect to='/code_3' />);
   }
   return (
     <div className="contact" style={{backgroundColor: bgColor}}>
