@@ -6,8 +6,11 @@ function Data(props) {
   if(props.boolean === "true"){
     var bgColor="lightGreen"
   }
-  else{
+  else if(props.boolean === "false"){
     bgColor="Red"
+  }
+  else{
+    bgColor="lightBlue"
   }
   return (
     <div className="contact" style={{backgroundColor: bgColor}}>
