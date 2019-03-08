@@ -10,12 +10,11 @@ import axios from "axios";
 class imageSensor extends Component {
   state = {
     dataImage: []
-
   };
   componentDidMount() {
 
     axios
-      .get("http://172.17.2.10:3000/api/imageReader")
+      .get("http://172.17.2.99:3000/api/imageReader")
       .then(response => {
         // create an array of data only with relevant data
         const newData = response.data.map(c => {
@@ -28,7 +27,7 @@ class imageSensor extends Component {
         });
         const newState = Object.assign({}, this.state, {
           dataImage: newData
-            .splice(newData.length - 5, newData.length - 1)
+            .splice(newData.length - 1, newData.length - 1)
             .reverse()
         });
         this.setState(newState);
@@ -49,7 +48,9 @@ class imageSensor extends Component {
           <Row>
             <Col>
               {"IMAGE sensor"}
-              <DataList data={this.state.dataImage} />
+                <div>
+                <DataList data={this.state.dataImage}/>
+                </div>
             </Col>
           </Row>
         </Container>
