@@ -45,7 +45,7 @@ class App extends Component {
         const newData = response.data.map(c => {
           return {
             id: c._id,
-            name: c.value
+            value: c.value
           };
         });
         const newState = Object.assign({}, this.state, {
@@ -64,7 +64,8 @@ class App extends Component {
         const newData = response.data.map(c => {
           return {
             id: c._id,
-            name: c.value
+            value: c.value,
+            devID: c.devID
           };
         });
         const newState = Object.assign({}, this.state, {
@@ -83,7 +84,7 @@ class App extends Component {
         const newData = response.data.map(c => {
           return {
             id: c._id,
-            name: c.value
+            value: c.value
           };
         });
         const newState = Object.assign({}, this.state, {
