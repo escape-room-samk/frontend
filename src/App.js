@@ -106,6 +106,19 @@ class App extends Component {
         </header>
 
         <Container>
+        <Row>
+            <Col sm="12" md={{ size: 6, offset: 3 }}>
+            <Iframe
+              url="http://172.17.2.25:8000"
+              width="640px"
+              height="500px"
+              id="myId"
+              className="myClassname"
+              display="initial"
+              position="relative"
+              allowFullScreen
+            />
+            </Col>
           <Row>
             <Col>
               {"QR reader"}
@@ -123,19 +136,10 @@ class App extends Component {
               {"IMAGE sensor"}
               <DataList data={this.state.dataImage} />
             </Col>
-            <Col>
+          </Row>
+
           
-              <Iframe
-                url="http://172.17.2.25:8000"
-                width="px"
-                height="450px"
-                id="myId"
-                className="myClassname"
-                display="initial"
-                position="relative"
-                allowFullScreen
-              />
-            </Col>
+
           </Row>
         </Container>
       </div>
