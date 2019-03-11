@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import DataList2 from "../code_2/DataList";
 import DataList from "../components/DataList";
 
-
 import logo from "../logo.svg";
 import axios from "axios";
 
@@ -16,26 +15,25 @@ class imageSensor extends Component {
   };
   componentDidMount() {
     axios
-    .get("http://172.17.2.10:3000/api/rfidReader")
-    .then(response => {
-      // create an array of data only with relevant data
-      const newData = response.data.map(c => {
-        return {
-          id: c._id,
-          value: c.value,
-          devID: c.devID,
-          boolean: c.boolean
-        };
-      });
-      const newState = Object.assign({}, this.state, {
-        dataRFID: newData
-          .splice(newData.length - 2, newData.length - 1)
-          .reverse()
-      });
-      this.setState(newState);
-    })
-    .catch(error => console.log(error));
-
+      .get("http://172.17.2.10:3000/api/rfidReader")
+      .then(response => {
+        // create an array of data only with relevant data
+        const newData = response.data.map(c => {
+          return {
+            id: c._id,
+            value: c.value,
+            devID: c.devID,
+            boolean: c.boolean
+          };
+        });
+        const newState = Object.assign({}, this.state, {
+          dataRFID: newData
+            .splice(newData.length - 2, newData.length - 1)
+            .reverse()
+        });
+        this.setState(newState);
+      })
+      .catch(error => console.log(error));
 
     axios
       .get("http://172.17.2.10:3000/api/imageReader")
@@ -51,14 +49,13 @@ class imageSensor extends Component {
         });
         const newState = Object.assign({}, this.state, {
           dataImage: newData
-            .splice(newData.length -1 , newData.length )
+            .splice(newData.length - 1, newData.length)
             .reverse()
         });
         this.setState(newState);
       })
       .catch(error => console.log(error));
-    }
-
+  }
 
   render() {
     return (
@@ -68,25 +65,23 @@ class imageSensor extends Component {
           <h1 className="App-title">CODE 2</h1>
         </header>
         <Container>
-
           <Row>
-          <Col xs="3">
+            <Col xs="3">
               {"dataRFID"}
-                <div>
-                <DataList data={this.state.dataRFID}/>
-                </div>
+              <div>
+                <DataList data={this.state.dataRFID} />
+              </div>
             </Col>
             <Col>
               {"IMAGE sensor"}
-                <div>
-                <DataList2 data={this.state.dataImage}/>
-                </div>
+              <div>
+                <DataList2 data={this.state.dataImage} />
+              </div>
             </Col>
-           
           </Row>
         </Container>
       </div>
     );
   }
 }
-export default imageSensor
+export default imageSensor;

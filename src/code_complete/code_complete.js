@@ -17,7 +17,7 @@ class RfidReader extends Component {
           <h1 className="App-title">ESCAPE ROOM</h1>
         </header>
         <Container>
-        <h1>COMPLETE</h1>
+          <h1>COMPLETE</h1>
         </Container>
       </div>
     );

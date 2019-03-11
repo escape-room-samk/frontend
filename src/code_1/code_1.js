@@ -10,7 +10,6 @@ class RfidReader extends Component {
   state = {
     dataImage: [],
     dataQR: []
-
   };
   componentDidMount() {
     axios
@@ -60,11 +59,10 @@ class RfidReader extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">CODE 1</h1>
-
         </header>
         <Container>
           <Row>
-          <Col xs="3">
+            <Col xs="3">
               {"RFID Reader"}
               <div>
                 <DataList data={this.state.dataImage} />
