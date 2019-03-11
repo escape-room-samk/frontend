@@ -19,7 +19,7 @@ class App extends Component {
           </div>
           
           <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '70vh'}}>
-          <h1><a href="http://10.200.138.128:3000/code_1">
+          <h1><a href="/code_1">
                   Start the game
                 </a>
                 </h1>
