@@ -51,7 +51,7 @@ class imageSensor extends Component {
         });
         const newState = Object.assign({}, this.state, {
           dataImage: newData
-            .splice(newData.length - 1, newData.length - 1)
+            .splice(newData.length -1 , newData.length )
             .reverse()
         });
         this.setState(newState);
@@ -65,7 +65,7 @@ class imageSensor extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">ESCAPE ROOM</h1>
+          <h1 className="App-title">CODE 2</h1>
         </header>
         <Container>
 
