@@ -14,7 +14,16 @@ class App extends Component {
           <h1 className="App-title">ESCAPE ROOM</h1>
         </header>
         <Container>
-          <h1>Welcome to the Escapre Room</h1>
+          <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
+            <h1>Welcome to the Escape Room</h1>
+          </div>
+          
+          <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '70vh'}}>
+          <h1><a href="http://10.200.138.128:3000/code_1">
+                  Start the game
+                </a>
+                </h1>
+</div>
         </Container>
       </div>
     );
