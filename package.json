@@ -22,7 +22,7 @@
     "video-react": "^0.13.3"
   },
   "devDependencies": {
-    "react-scripts": "1.0.17"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
